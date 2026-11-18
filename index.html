@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Search & Location Bar -->
+        <div class="search-box">
+            <div class="input-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="city-input" placeholder="Search city (e.g. Colombo, Tokyo)..." spellcheck="false">
+            </div>
+            <button id="search-btn" title="Search"><i class="fas fa-arrow-right"></i></button>
+            <button id="location-btn" title="Use Current Location"><i class="fas fa-location-crosshairs"></i></button>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error" id="error-msg">
+            <i class="fas fa-exclamation-circle"></i>
+            <p id="error-text">City not found. Please try again!</p>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="loader" id="loader"></div>
+
+        <!-- Weather Content -->
+        <div class="weather-content" id="weather-box">
+            <!-- Current Weather -->
+            <div class="current-weather">
+                <div class="location-info">
+                    <h2 id="city">Colombo, LK</h2>
+                    <p id="date">Wednesday, 18 Nov</p>
+                </div>
+
+                <div class="main-temp">
+                    <img src="" alt="weather icon" id="weather-icon">
+                    <div>
+                        <h1 id="temp">28°C</h1>
+                        <p id="description">Scattered Clouds</p>
+                    </div>
+                </div>
+
+                <!-- Extra Details Grid -->
+                <div class="details-grid">
+                    <div class="detail-card">
+                        <i class="fas fa-temperature-half"></i>
+                        <div>
+                            <span class="label">Feels Like</span>
+                            <p id="feels-like">30°C</p>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-droplet"></i>
+                        <div>
+                            <span class="label">Humidity</span>
+                            <p id="humidity">75%</p>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fas fa-wind"></i>
+                        <div>
+                            <span class="label">Wind Speed</span>
+                            <p id="wind">12 km/h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5-Day Forecast Section -->
+            <div class="forecast-section">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-container" id="forecast-container">
+                    <!-- JS මගින් Forecast cards මෙතනට එකතු වේ -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
